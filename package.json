@@ -1,7 +1,7 @@
 {
   "name": "@tsdotnet/threading",
   "version": "1.0.1",
-  "description": "",
+  "description": "Classes and functions for simplifying task scheduling and distributing tasks to workers.",
   "author": "electricessence",
   "license": "MIT",
   "types": "dist/threading.d.ts",
@@ -12,13 +12,17 @@
     "tasks",
     "task",
     "TaskHandler",
+    "task handler",
+    "task-handler",
     "handler",
+    "delegate",
     "cancellable",
     "defer",
     "deferImmediate",
     "defer immediate",
     "defer-immediate",
-    "worker"
+    "worker",
+    "web-worker"
   ],
   "scripts": {
     "build:dist": "rimraf dist/* && copyfiles -u 1 src/**/*.d.ts dist && tsc",

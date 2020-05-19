@@ -4,7 +4,7 @@
 ![npm-publish](https://github.com/tsdotnet/threading/workflows/npm-publish/badge.svg)
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/threading.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/threading)
 
-
+Classes and functions for simplifying task scheduling and distributing tasks to workers.
 
 ## Docs
 
