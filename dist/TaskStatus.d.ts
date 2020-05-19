@@ -35,15 +35,15 @@ declare const enum TaskStatus
 	/**
 	 *  The task is currently blocked in a wait state.
 	 */
-	// Blocked,
-	// /**
-	//  *  The task has finished executing and is implicitly waiting for
-	//  *  attached child tasks to complete.
-	//  */
-	// WaitingForChildrenToComplete,
-	// /**
-	//  *  The task completed execution successfully.
-	//  */
+		// Blocked,
+		// /**
+		//  *  The task has finished executing and is implicitly waiting for
+		//  *  attached child tasks to complete.
+		//  */
+		// WaitingForChildrenToComplete,
+		// /**
+		//  *  The task completed execution successfully.
+		//  */
 	RanToCompletion,
 	/**
 	 *  The task acknowledged cancellation by throwing an OperationCanceledException with its own CancellationToken
