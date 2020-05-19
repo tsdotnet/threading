@@ -20,7 +20,7 @@ const ps = require('child_process');
 /**
  * This class takes the place of a WebWorker
  */
-export default class NodeJSWorker
+export default class LegacyNodeWorker
 	extends ObservableBase<any>
 	implements WorkerLike
 {

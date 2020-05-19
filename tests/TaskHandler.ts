@@ -1,6 +1,12 @@
 import {assert} from 'chai';
 import TaskHandler from '../src/TaskHandler';
+import Worker from '../src/Worker';
 
+describe('Worker', () => {
+	it('have valid constructor', () => {
+		assert.isNotNull(Worker);
+	});
+});
 
 describe('new TaskHandler()', () => {
 	it('should throw', () => {

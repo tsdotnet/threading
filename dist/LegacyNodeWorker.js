@@ -1,3 +1,4 @@
+"use strict";
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
@@ -7,14 +8,16 @@
  * @packageDocumentation
  * @module threading
  */
-import ObservableBase from '@tsdotnet/observable-base/dist/ObservableBase';
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const ObservableBase_1 = tslib_1.__importDefault(require("@tsdotnet/observable-base/dist/ObservableBase"));
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const ps = require('child_process');
 //import {ChildProcess} from "child_process";
 /**
  * This class takes the place of a WebWorker
  */
-export default class NodeJSWorker extends ObservableBase {
+class LegacyNodeWorker extends ObservableBase_1.default {
     constructor(url) {
         super();
         const process = this._process = ps.fork(url);
@@ -45,4 +48,5 @@ export default class NodeJSWorker extends ObservableBase {
         this._process = null;
     }
 }
-//# sourceMappingURL=NodeJSWorker.js.map
+exports.default = LegacyNodeWorker;
+//# sourceMappingURL=LegacyNodeWorker.js.map

@@ -13,8 +13,16 @@ const environment_1 = require("./environment");
 /**
  * Default worker constructor for the current environment.
  */
-exports.Worker = environment_1.isNodeJS
-    ? require('./NodeJSWorker').default
-    : self.Worker;
+exports.Worker = getNodeWorker();
 exports.default = exports.Worker;
+function getNodeWorker() {
+    try {
+        return eval('Worker');
+    }
+    catch (ex) {
+        return environment_1.isNodeJS
+            ? require('./LegacyNodeWorker').default
+            : self.Worker;
+    }
+}
 //# sourceMappingURL=Worker.js.map

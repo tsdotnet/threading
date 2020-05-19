@@ -13,8 +13,19 @@ import {WorkerConstructor} from './WorkerLike';
 /**
  * Default worker constructor for the current environment.
  */
-export const Worker: WorkerConstructor = isNodeJS
-	? (require as any)('./NodeJSWorker').default
-	: (self as any).Worker;
-
+export const Worker: WorkerConstructor = getNodeWorker();
 export default Worker;
+
+function getNodeWorker (): WorkerConstructor
+{
+	try
+	{
+		return eval('Worker');
+	}
+	catch(ex)
+	{
+		return isNodeJS
+			? (require as any)('./LegacyNodeWorker').default
+			: (self as any).Worker;
+	}
+}

@@ -13,7 +13,7 @@ import { WorkerLike } from './WorkerLike';
 /**
  * This class takes the place of a WebWorker
  */
-export default class NodeJSWorker extends ObservableBase<any> implements WorkerLike {
+export default class LegacyNodeWorker extends ObservableBase<any> implements WorkerLike {
     onmessage?: Action<{
         data: any;
     }> | null;

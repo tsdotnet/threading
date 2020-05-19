@@ -69,6 +69,7 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/threading.legacynodeworker.html" class="tsd-kind-icon">Legacy<wbr>Node<wbr>Worker</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/threading.task.html" class="tsd-kind-icon">Task</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/threading.taskhandler.html" class="tsd-kind-icon">Task<wbr>Handler</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/threading.taskhandlerbase.html" class="tsd-kind-icon">Task<wbr>Handler<wbr>Base</a></li>
@@ -109,10 +110,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
 					<a name="worker" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> Worker</h3>
-					<div class="tsd-signature tsd-kind-icon">Worker<span class="tsd-signature-symbol">:</span> <a href="../interfaces/threading.workerconstructor.html" class="tsd-signature-type">WorkerConstructor</a><span class="tsd-signature-symbol"> = isNodeJS? (require as any)(&#x27;./NodeJSWorker&#x27;).default: (self as any).Worker</span></div>
+					<div class="tsd-signature tsd-kind-icon">Worker<span class="tsd-signature-symbol">:</span> <a href="../interfaces/threading.workerconstructor.html" class="tsd-signature-type">WorkerConstructor</a><span class="tsd-signature-symbol"> = getNodeWorker()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/Worker.ts#L16">src/Worker.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/Worker.ts#L16">src/Worker.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -127,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>CommonJS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = !!(r &amp;&amp; r.resolve)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/environment.ts#L23">src/environment.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/environment.ts#L23">src/environment.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -137,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>NodeJS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = typeof process&#x3D;&#x3D;&#x27;object&#x27;&amp;&amp; process.toString()&#x3D;&#x3D;&#x3D;&#x27;[object process]&#x27;&amp;&amp; process.nextTick!&#x3D; void 0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/environment.ts#L43">src/environment.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/environment.ts#L43">src/environment.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,7 +148,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>RequireJS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = !!(r &amp;&amp; r.toUrl &amp;&amp; r.defined)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/environment.ts#L28">src/environment.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/environment.ts#L28">src/environment.ts:28</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -165,7 +166,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/defer.ts#L100">src/defer.ts:100</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/defer.ts#L100">src/defer.ts:100</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -182,7 +183,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/defer.ts#L104">src/defer.ts:104</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/defer.ts#L104">src/defer.ts:104</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -217,7 +218,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/deferImmediate.ts#L155">src/deferImmediate.ts:155</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/deferImmediate.ts#L155">src/deferImmediate.ts:155</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -252,7 +253,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/defer.ts#L117">src/defer.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/defer.ts#L117">src/defer.ts:117</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -281,7 +282,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/75773e4/src/deferImmediate.ts#L185">src/deferImmediate.ts:185</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/8c18d0c/src/deferImmediate.ts#L185">src/deferImmediate.ts:185</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -318,6 +319,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/threading.legacynodeworker.html" class="tsd-kind-icon">Legacy<wbr>Node<wbr>Worker</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="../classes/threading.task.html" class="tsd-kind-icon">Task</a>
 					</li>
