@@ -49,7 +49,7 @@
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
-    "@types/node": "^14.0.3",
+    "@types/node": "^14.0.4",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "chai": "^4.2.0",
@@ -67,7 +67,7 @@
     "typedoc": "^0.17.7",
     "typedoc-plugin-external-module-name": "^3.1.0",
     "typedoc-plugin-nojekyll": "^1.0.1",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.3"
   },
   "dependencies": {
     "@tsdotnet/common-interfaces": "^1.0.4",
