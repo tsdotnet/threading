@@ -152,7 +152,7 @@ function requestFlush (): void
  * @param args
  * @returns Cancellable
  */
-export function deferImmediate (task: Function, context?: any, args?: any[]): Cancellable
+export function deferImmediate (task: Function, context?: unknown, args?: unknown[]): Cancellable
 {
 	const entry: TaskQueueEntry = entryPool.take();
 	entry.task = task;
@@ -172,6 +172,7 @@ export function deferImmediate (task: Function, context?: any, args?: any[]): Ca
 
 	return {
 		cancel: entry.canceller,
+		// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 		dispose: () => { entry && entry.canceller(); }
 	};
 }

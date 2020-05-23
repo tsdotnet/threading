@@ -16,7 +16,7 @@ import Cancellable from './Cancellable';
  * @param args
  * @returns Cancellable
  */
-export declare function deferImmediate(task: Function, context?: any, args?: any[]): Cancellable;
+export declare function deferImmediate(task: Function, context?: unknown, args?: unknown[]): Cancellable;
 /**
  * Runs a task after all other tasks have been run
  * this is useful for unhandled rejection tracking that needs to happen

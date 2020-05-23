@@ -107,6 +107,7 @@ export function deferImmediate(task, context, args) {
     requestFlush();
     return {
         cancel: entry.canceller,
+        // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
         dispose: () => { entry && entry.canceller(); }
     };
 }

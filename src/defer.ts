@@ -109,7 +109,7 @@ export function defer<T> (
 export function defer<T> (
 	task: Function,
 	delay?: number,
-	payload?: any): Cancellable
+	payload?: T): Cancellable
 {
 	return new Defer(task, delay, payload);
 }

@@ -36,18 +36,18 @@ export default class LegacyNodeWorker
 		process.on('error', (err: any) => this._onError(err));
 	}
 
-	postMessage (obj: any): void
+	postMessage (obj: unknown): void
 	{
 		this.throwIfDisposed();
 		this._process.send(JSON.stringify({data: obj}));
 	}
 
-	terminate ()
+	terminate (): void
 	{
 		this.dispose();
 	}
 
-	protected _onNext (data: any): void
+	protected _onNext (data: unknown): void
 	{
 		super._onNext(data);
 		if(this.onmessage)
@@ -55,14 +55,14 @@ export default class LegacyNodeWorker
 
 	}
 
-	protected _onError (error: any): void
+	protected _onError (error: unknown): void
 	{
 		super._onError(error);
 		if(this.onerror)
 			this.onerror(error);
 	}
 
-	protected _onDispose ()
+	protected _onDispose (): void
 	{
 		super._onDispose();
 		this._process.removeAllListeners(); // just to satisfy paranoia.

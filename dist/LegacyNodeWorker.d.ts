@@ -20,9 +20,9 @@ export default class LegacyNodeWorker extends ObservableBase<any> implements Wor
     onerror?: Action<any> | null;
     private _process;
     constructor(url: string);
-    postMessage(obj: any): void;
+    postMessage(obj: unknown): void;
     terminate(): void;
-    protected _onNext(data: any): void;
-    protected _onError(error: any): void;
+    protected _onNext(data: unknown): void;
+    protected _onError(error: unknown): void;
     protected _onDispose(): void;
 }
