@@ -1,6 +1,6 @@
 {
   "name": "@tsdotnet/threading",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Classes and functions for simplifying task scheduling and distributing tasks to workers.",
   "author": "electricessence",
   "license": "MIT",
