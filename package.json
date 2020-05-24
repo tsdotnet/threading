@@ -76,7 +76,7 @@
     "@tsdotnet/lazy": "^1.0.19",
     "@tsdotnet/linked-node-list": "^1.3.11",
     "@tsdotnet/object-pool": "^1.0.5",
-    "@tsdotnet/observable-base": "^1.0.10",
+    "@tsdotnet/observable-base": "^1.0.12",
     "@tsdotnet/queue": "^1.2.1",
     "tslib": "^2.0.0"
   }
