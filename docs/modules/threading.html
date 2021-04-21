@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for @tsdotnet/threading - v1.0.13">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -49,7 +50,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../index.html">@tsdotnet/threading - v1.0.13</a>
 				</li>
 				<li>
 					<a href="threading.html">threading</a>
@@ -67,249 +68,54 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/threading.task.html" class="tsd-kind-icon">Task</a></li>
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/threading.taskhandler.html" class="tsd-kind-icon">Task<wbr>Handler</a></li>
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/threading.taskhandlerbase.html" class="tsd-kind-icon">Task<wbr>Handler<wbr>Base</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/threading.cancellable.html" class="tsd-kind-icon">Cancellable</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/threading.taskstate.html" class="tsd-kind-icon">Task<wbr>State</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/threading.workerconstructor.html" class="tsd-kind-icon">Worker<wbr>Constructor</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/threading.workerlike.html" class="tsd-kind-icon">Worker<wbr>Like</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="threading.html#worker" class="tsd-kind-icon">Worker</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="threading.html#iscommonjs" class="tsd-kind-icon">is<wbr>CommonJS</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="threading.html#isnodejs" class="tsd-kind-icon">is<wbr>NodeJS</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="threading.html#isrequirejs" class="tsd-kind-icon">is<wbr>RequireJS</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Functions</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="threading.html#defer" class="tsd-kind-icon">defer</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="threading.html#deferimmediate" class="tsd-kind-icon">defer<wbr>Immediate</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="threading.html#interval" class="tsd-kind-icon">interval</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="threading.html#runafterdeferred" class="tsd-kind-icon">run<wbr>After<wbr>Deferred</a></li>
-							</ul>
-						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="worker" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> Worker</h3>
-					<div class="tsd-signature tsd-kind-icon">Worker<span class="tsd-signature-symbol">:</span> <a href="../interfaces/threading.workerconstructor.html" class="tsd-signature-type">WorkerConstructor</a><span class="tsd-signature-symbol"> = getNodeWorker()</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/Worker.ts#L16">src/Worker.ts:16</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Default worker constructor for the current environment.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="iscommonjs" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>CommonJS</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>CommonJS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = !!(r &amp;&amp; r.resolve)</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/environment.ts#L23">src/environment.ts:23</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="isnodejs" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>NodeJS</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>NodeJS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = typeof process&#x3D;&#x3D;&#x27;object&#x27;&amp;&amp; process.toString()&#x3D;&#x3D;&#x3D;&#x27;[object process]&#x27;&amp;&amp; process.nextTick!&#x3D; void 0</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/environment.ts#L43">src/environment.ts:43</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="isrequirejs" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>RequireJS</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>RequireJS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = !!(r &amp;&amp; r.toUrl &amp;&amp; r.defined)</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/environment.ts#L28">src/environment.ts:28</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-					<a name="defer" class="tsd-anchor"></a>
-					<h3>defer</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">defer<span class="tsd-signature-symbol">(</span>task<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Closure</span>, delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/threading.cancellable.html" class="tsd-signature-type">Cancellable</a></li>
-						<li class="tsd-signature tsd-kind-icon">defer&lt;T&gt;<span class="tsd-signature-symbol">(</span>task<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Func</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, delay<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, payload<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">T</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/threading.cancellable.html" class="tsd-signature-type">Cancellable</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/defer.ts#L100">src/defer.ts:100</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>task: <span class="tsd-signature-type">Closure</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> delay: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/threading.cancellable.html" class="tsd-signature-type">Cancellable</a></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/defer.ts#L104">src/defer.ts:104</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>task: <span class="tsd-signature-type">Func</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> delay: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> payload: <a href="" class="tsd-signature-type">T</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/threading.cancellable.html" class="tsd-signature-type">Cancellable</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="deferimmediate" class="tsd-anchor"></a>
-					<h3>defer<wbr>Immediate</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">defer<wbr>Immediate<span class="tsd-signature-symbol">(</span>task<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span>, context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/threading.cancellable.html" class="tsd-signature-type">Cancellable</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/deferImmediate.ts#L155">src/deferImmediate.ts:155</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Defers a delegate till the next tick or zero timeout.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>task: <span class="tsd-signature-type">Function</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> context: <span class="tsd-signature-type">unknown</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/threading.cancellable.html" class="tsd-signature-type">Cancellable</a></h4>
-							<p>Cancellable</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="interval" class="tsd-anchor"></a>
-					<h3>interval</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">interval<span class="tsd-signature-symbol">(</span>task<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span>, interval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/threading.cancellable.html" class="tsd-signature-type">Cancellable</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/defer.ts#L117">src/defer.ts:117</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>task: <span class="tsd-signature-type">Function</span></h5>
-								</li>
-								<li>
-									<h5>interval: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> count: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Infinity</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/threading.cancellable.html" class="tsd-signature-type">Cancellable</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="runafterdeferred" class="tsd-anchor"></a>
-					<h3>run<wbr>After<wbr>Deferred</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>After<wbr>Deferred<span class="tsd-signature-symbol">(</span>task<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Closure</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/threading/blob/f14b938/src/deferImmediate.ts#L186">src/deferImmediate.ts:186</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Runs a task after all other tasks have been run
-										this is useful for unhandled rejection tracking that needs to happen
-									after all <code>then</code>d tasks have been run.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>task: <span class="tsd-signature-type">Closure</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="../index.html">Exports</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="threading.html">threading</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="threading.html">threading</a>
@@ -318,50 +124,11 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/threading.task.html" class="tsd-kind-icon">Task</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/threading.taskhandler.html" class="tsd-kind-icon">Task<wbr>Handler</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/threading.taskhandlerbase.html" class="tsd-kind-icon">Task<wbr>Handler<wbr>Base</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/threading.cancellable.html" class="tsd-kind-icon">Cancellable</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/threading.taskstate.html" class="tsd-kind-icon">Task<wbr>State</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/threading.workerconstructor.html" class="tsd-kind-icon">Worker<wbr>Constructor</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/threading.workerlike.html" class="tsd-kind-icon">Worker<wbr>Like</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="threading.html#worker" class="tsd-kind-icon">Worker</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="threading.html#iscommonjs" class="tsd-kind-icon">is<wbr>CommonJS</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="threading.html#isnodejs" class="tsd-kind-icon">is<wbr>NodeJS</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="threading.html#isrequirejs" class="tsd-kind-icon">is<wbr>RequireJS</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="threading.html#defer" class="tsd-kind-icon">defer</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="threading.html#deferimmediate" class="tsd-kind-icon">defer<wbr>Immediate</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="threading.html#interval" class="tsd-kind-icon">interval</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="threading.html#runafterdeferred" class="tsd-kind-icon">run<wbr>After<wbr>Deferred</a>
 					</li>
 				</ul>
 			</nav>
@@ -385,6 +152,9 @@
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
 		</div>
 	</div>
 </footer>
@@ -393,6 +163,5 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
