@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
 import { Lazy } from '@tsdotnet/lazy';
 import TaskHandlerBase from './TaskHandlerBase';

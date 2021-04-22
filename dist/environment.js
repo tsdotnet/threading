@@ -3,10 +3,6 @@
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isNodeJS = exports.isRequireJS = exports.isCommonJS = void 0;
 // Need to spoof this so WebPack doesn't panic (warnings).

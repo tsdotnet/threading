@@ -3,10 +3,6 @@
  * @license MIT
  * Based on code from: https://github.com/kriskowal/q
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import { LinkedNodeList } from '@tsdotnet/linked-node-list/dist/LinkedNodeList';
 import ObjectPool from '@tsdotnet/object-pool';
 import Queue from '@tsdotnet/queue';

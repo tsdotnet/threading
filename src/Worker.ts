@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 
 import {isNodeJS} from './environment';
 import {WorkerConstructor} from './WorkerLike';

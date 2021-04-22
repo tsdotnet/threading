@@ -3,11 +3,6 @@
  * @license MIT
  * Based on code from: https://github.com/kriskowal/q
  */
-/**
- * @packageDocumentation
- * @module threading
- */
-
 
 import {Closure} from '@tsdotnet/common-interfaces';
 import {LinkedNode} from '@tsdotnet/linked-node-list/dist/LinkedListNode';

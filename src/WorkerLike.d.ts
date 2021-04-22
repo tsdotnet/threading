@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 
 import {Action} from '@tsdotnet/common-interfaces';
 

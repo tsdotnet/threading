@@ -3,10 +3,6 @@
  * @license MIT
  * Based upon Parallel.js: https://github.com/adambom/parallel.js/blob/master/lib/Worker.js
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import { Action } from '@tsdotnet/common-interfaces';
 import ObservableBase from '@tsdotnet/observable-base/dist/ObservableBase';
 import { WorkerLike } from './WorkerLike';

@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import { Closure, Func } from '@tsdotnet/common-interfaces';
 import Cancellable from './Cancellable';
 export declare function defer(task: Closure, delay?: number): Cancellable;

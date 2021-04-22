@@ -3,10 +3,6 @@
  * @license MIT
  * Based on code from: https://github.com/kriskowal/q
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import { Closure } from '@tsdotnet/common-interfaces';
 import Cancellable from './Cancellable';
 /**

@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import DisposableBase from '@tsdotnet/disposable/dist/DisposableBase';
 const NAME = 'TaskHandlerBase';
 /**

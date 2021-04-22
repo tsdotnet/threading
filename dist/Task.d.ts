@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import { Func } from '@tsdotnet/common-interfaces';
 import TaskHandlerBase from './TaskHandlerBase';
 import TaskState from './TaskState';

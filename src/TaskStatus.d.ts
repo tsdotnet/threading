@@ -5,10 +5,6 @@
  *	http://msdn.microsoft.com/en-us/library/dd321424%28v=vs.110%29.aspx
  *	http://referencesource.microsoft.com/#mscorlib/system/threading/Tasks/Task.cs
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 
 /**
  *  Represents the current stage in the lifecycle of a Task.

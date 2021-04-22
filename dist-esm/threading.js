@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import defer from './defer';
 import deferImmediate from './deferImmediate';
 import * as environment from './environment';

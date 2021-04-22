@@ -4,10 +4,6 @@
  * @license MIT
  * Based on code from: https://github.com/kriskowal/q
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.runAfterDeferred = exports.deferImmediate = void 0;
 const tslib_1 = require("tslib");

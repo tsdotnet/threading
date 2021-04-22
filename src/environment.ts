@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 
 /* eslint-disable no-empty */
 

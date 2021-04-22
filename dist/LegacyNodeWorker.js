@@ -4,10 +4,6 @@
  * @license MIT
  * Based upon Parallel.js: https://github.com/adambom/parallel.js/blob/master/lib/Worker.js
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const ObservableBase_1 = tslib_1.__importDefault(require("@tsdotnet/observable-base/dist/ObservableBase"));

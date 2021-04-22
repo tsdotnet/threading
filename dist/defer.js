@@ -3,10 +3,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.interval = exports.defer = void 0;
 class DeferBase {

@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import { Closure } from '@tsdotnet/common-interfaces';
 import TaskHandlerBase from './TaskHandlerBase';
 export default class TaskHandler extends TaskHandlerBase {

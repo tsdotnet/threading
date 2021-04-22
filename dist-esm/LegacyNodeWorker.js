@@ -3,10 +3,6 @@
  * @license MIT
  * Based upon Parallel.js: https://github.com/adambom/parallel.js/blob/master/lib/Worker.js
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import ObservableBase from '@tsdotnet/observable-base/dist/ObservableBase';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const ps = require('child_process');

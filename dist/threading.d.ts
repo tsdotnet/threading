@@ -2,10 +2,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module threading
- */
 import Cancellable from './Cancellable';
 import defer from './defer';
 import deferImmediate from './deferImmediate';
