@@ -7,7 +7,7 @@ import {Closure, Func} from '@tsdotnet/common-interfaces';
 import Cancellable from './Cancellable';
 
 abstract class DeferBase
-	implements Cancellable
+implements Cancellable
 {
 	// It may be a Timer in node, should not be restricted to number.
 	protected _id: any;
@@ -100,7 +100,7 @@ export function defer (
 export function defer<T> (
 	task: Func<T>,
 	delay?: number,
-	payload?: T): Cancellable
+	payload?: T): Cancellable;
 
 export function defer<T> (
 	task: Function,

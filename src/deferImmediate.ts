@@ -59,7 +59,7 @@ function flush (): void
 	while(laterQueue.tryDequeue(task => {
 		runSingle(task);
 	}))
-		// eslint-disable-next-line no-empty
+	// eslint-disable-next-line no-empty
 	{}
 
 
