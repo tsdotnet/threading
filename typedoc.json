@@ -1,10 +1,6 @@
 {
   "entryPoints": [
-    "./src"
-  ],
-  "exclude": [
-    "./src/index.ts",
-    "./src/LegacyNodeWorker.ts"
+    "./src/threading.ts"
   ],
   "out": "docs",
   "includeVersion": true,

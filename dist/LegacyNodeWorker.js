@@ -6,7 +6,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const ObservableBase_1 = tslib_1.__importDefault(require("@tsdotnet/observable-base/dist/ObservableBase"));
+const ObservableBase_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/observable-base/dist/ObservableBase"));
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const ps = require('child_process');
 //import {ChildProcess} from "child_process";

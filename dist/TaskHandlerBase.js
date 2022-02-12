@@ -5,7 +5,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const DisposableBase_1 = tslib_1.__importDefault(require("@tsdotnet/disposable/dist/DisposableBase"));
+const DisposableBase_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/disposable/dist/DisposableBase"));
 const NAME = 'TaskHandlerBase';
 /**
  * A simple class for handling potentially repeated executions either deferred or immediate.

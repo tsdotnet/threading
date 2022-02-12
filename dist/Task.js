@@ -6,9 +6,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Task = void 0;
 const tslib_1 = require("tslib");
-const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
+const ArgumentNullException_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
 const lazy_1 = require("@tsdotnet/lazy");
-const TaskHandlerBase_1 = tslib_1.__importDefault(require("./TaskHandlerBase"));
+const TaskHandlerBase_1 = (0, tslib_1.__importDefault)(require("./TaskHandlerBase"));
 /**
  * A simplified synchronous (but deferrable) version of Task<T>
  * Asynchronous operations should use Promise<T>.
