@@ -29,12 +29,12 @@ export class Task extends TaskHandlerBase {
         return this._result.error;
     }
     start(defer) {
-        if (this.getStatus() == 0 /* Created */) {
+        if (this.getStatus() == 0 /* TaskStatus.Created */) {
             super.start(defer);
         }
     }
     runSynchronously() {
-        if (this.getStatus() == 0 /* Created */) {
+        if (this.getStatus() == 0 /* TaskStatus.Created */) {
             super.runSynchronously();
         }
     }

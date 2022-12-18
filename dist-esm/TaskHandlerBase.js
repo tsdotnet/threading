@@ -11,7 +11,7 @@ export default class TaskHandlerBase extends DisposableBase {
     constructor() {
         super(NAME);
         this._timeoutId = null;
-        this._status = 0 /* Created */;
+        this._status = 0 /* TaskStatus.Created */;
     }
     get status() {
         return this.getStatus();
@@ -22,13 +22,13 @@ export default class TaskHandlerBase extends DisposableBase {
     // Use a static function here to avoid recreating a new function every time.
     static _handler(d) {
         d.cancel();
-        d._status = 2 /* Running */;
+        d._status = 2 /* TaskStatus.Running */;
         try {
             d._onExecute();
-            d._status = 3 /* RanToCompletion */;
+            d._status = 3 /* TaskStatus.RanToCompletion */;
         }
         catch (ex) {
-            d._status = 5 /* Faulted */;
+            d._status = 5 /* TaskStatus.Faulted */;
         }
     }
     /**
@@ -38,7 +38,7 @@ export default class TaskHandlerBase extends DisposableBase {
     start(defer = 0) {
         this.throwIfDisposed();
         this.cancel();
-        this._status = 1 /* WaitingToRun */;
+        this._status = 1 /* TaskStatus.WaitingToRun */;
         if (!(defer > 0))
             defer = 0; // A negation is used to catch edge cases.
         if (isFinite(defer))
@@ -53,7 +53,7 @@ export default class TaskHandlerBase extends DisposableBase {
         if (id) {
             clearTimeout(id);
             this._timeoutId = null;
-            this._status = 4 /* Cancelled */;
+            this._status = 4 /* TaskStatus.Cancelled */;
             return true;
         }
         return false;
