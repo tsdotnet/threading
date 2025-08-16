@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-import Disposable from '@tsdotnet/disposable/dist/Disposable';
+import type {Disposable} from '@tsdotnet/disposable';
 
 export default interface Cancellable
 	extends Disposable
@@ -14,4 +14,5 @@ export default interface Cancellable
 	 * Returns false if already run or already cancelled or unable to cancel.
 	 */
 	cancel (): boolean;
+// eslint-disable-next-line semi
 }

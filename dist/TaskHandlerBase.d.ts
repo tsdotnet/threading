@@ -2,8 +2,8 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import DisposableBase from '@tsdotnet/disposable/dist/DisposableBase';
-import Cancellable from './Cancellable';
+import { DisposableBase } from '@tsdotnet/disposable';
+import type Cancellable from './Cancellable';
 import TaskStatus from './TaskStatus';
 /**
  * A simple class for handling potentially repeated executions either deferred or immediate.

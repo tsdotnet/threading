@@ -3,11 +3,12 @@
  * @license MIT
  */
 
-import TaskStatus from './TaskStatus';
+import type TaskStatus from './TaskStatus';
 
 export default interface TaskState<T>
 {
 	status: TaskStatus;
 	result?: T;
 	error?: any;
+// eslint-disable-next-line semi
 }

@@ -4,7 +4,7 @@
  * Based upon Parallel.js: https://github.com/adambom/parallel.js/blob/master/lib/Worker.js
  */
 import { Action } from '@tsdotnet/common-interfaces';
-import ObservableBase from '@tsdotnet/observable-base/dist/ObservableBase';
+import { ObservableBase } from '@tsdotnet/observable-base';
 import { WorkerLike } from './WorkerLike';
 /**
  * This class takes the place of a WebWorker

@@ -3,8 +3,8 @@
  * @license MIT
  */
 
-import {Closure} from '@tsdotnet/common-interfaces';
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
+import {type Closure} from '@tsdotnet/common-interfaces';
+import {ArgumentNullException} from '@tsdotnet/exceptions';
 import TaskHandlerBase from './TaskHandlerBase';
 
 export default class TaskHandler

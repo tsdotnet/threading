@@ -4,7 +4,7 @@
  */
 
 import {Func} from '@tsdotnet/common-interfaces';
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
+import {ArgumentNullException} from '@tsdotnet/exceptions';
 import {Lazy} from '@tsdotnet/lazy';
 import TaskHandlerBase from './TaskHandlerBase';
 import TaskState from './TaskState';

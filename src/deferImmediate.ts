@@ -4,12 +4,11 @@
  * Based on code from: https://github.com/kriskowal/q
  */
 
-import {Closure} from '@tsdotnet/common-interfaces';
-import {LinkedNode} from '@tsdotnet/linked-node-list/dist/LinkedListNode';
-import {LinkedNodeList} from '@tsdotnet/linked-node-list/dist/LinkedNodeList';
+import {type Closure} from '@tsdotnet/common-interfaces';
+import {LinkedNode, LinkedNodeList} from '@tsdotnet/linked-node-list';
 import ObjectPool from '@tsdotnet/object-pool';
 import Queue from '@tsdotnet/queue';
-import Cancellable from './Cancellable';
+import type Cancellable from './Cancellable';
 import {isNodeJS} from './environment';
 
 declare namespace process
@@ -167,8 +166,8 @@ export function deferImmediate (task: Function, context?: unknown, args?: unknow
 
 	return {
 		cancel: entry.canceller,
-		// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-		dispose: () => { entry && entry.canceller(); }
+		
+		dispose: () => { if(entry) entry.canceller(); }
 	};
 }
 
@@ -213,7 +212,6 @@ else if(typeof MessageChannel!=='undefined')
 	const channel = new MessageChannel();
 	// At least Safari Version 6.0.5 (8536.30.1) intermittently cannot create
 	// working message ports the first time a page loads.
-	// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 	channel.port1.onmessage = function() {
 		requestTick = requestPortTick;
 		channel.port1.onmessage = flush;

@@ -5,10 +5,10 @@
  */
 
 import {Action} from '@tsdotnet/common-interfaces';
-import ObservableBase from '@tsdotnet/observable-base/dist/ObservableBase';
+import {ObservableBase} from '@tsdotnet/observable-base';
 import {WorkerLike} from './WorkerLike';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const ps = require('child_process');
 //import {ChildProcess} from "child_process";
 

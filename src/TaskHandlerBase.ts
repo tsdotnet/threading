@@ -3,8 +3,8 @@
  * @license MIT
  */
 
-import DisposableBase from '@tsdotnet/disposable/dist/DisposableBase';
-import Cancellable from './Cancellable';
+import { DisposableBase } from '@tsdotnet/disposable';
+import type Cancellable from './Cancellable';
 import TaskStatus from './TaskStatus';
 
 
@@ -47,7 +47,7 @@ export default abstract class TaskHandlerBase
 			d._onExecute();
 			d._status = TaskStatus.RanToCompletion;
 		}
-		catch(ex)
+		catch
 		{
 			d._status = TaskStatus.Faulted;
 		}

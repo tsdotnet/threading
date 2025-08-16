@@ -3,8 +3,8 @@
  * @license MIT
  * Based on code from: https://github.com/kriskowal/q
  */
-import { Closure } from '@tsdotnet/common-interfaces';
-import Cancellable from './Cancellable';
+import { type Closure } from '@tsdotnet/common-interfaces';
+import type Cancellable from './Cancellable';
 /**
  * Defers a delegate till the next tick or zero timeout.
  * @param task
