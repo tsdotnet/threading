@@ -9,10 +9,6 @@ const tslib_1 = require("tslib");
 const exceptions_1 = require("@tsdotnet/exceptions");
 const lazy_1 = require("@tsdotnet/lazy");
 const TaskHandlerBase_1 = tslib_1.__importDefault(require("./TaskHandlerBase"));
-/**
- * A simplified synchronous (but deferrable) version of Task<T>
- * Asynchronous operations should use Promise<T>.
- */
 class Task extends TaskHandlerBase_1.default {
     constructor(valueFactory) {
         super();
@@ -33,12 +29,12 @@ class Task extends TaskHandlerBase_1.default {
         return this._result.error;
     }
     start(defer) {
-        if (this.getStatus() == 0 /* TaskStatus.Created */) {
+        if (this.getStatus() == 0) {
             super.start(defer);
         }
     }
     runSynchronously() {
-        if (this.getStatus() == 0 /* TaskStatus.Created */) {
+        if (this.getStatus() == 0) {
             super.runSynchronously();
         }
     }
@@ -46,7 +42,7 @@ class Task extends TaskHandlerBase_1.default {
         this._result.getValue();
     }
     getResult() {
-        return this._result.value; // This will detect any potential recursion.
+        return this._result.value;
     }
     getState() {
         const r = this._result;

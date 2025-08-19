@@ -3,11 +3,11 @@
  * @license MIT
  */
 
-import {Func} from '@tsdotnet/common-interfaces';
+import type {Func} from '@tsdotnet/common-interfaces';
 import {ArgumentNullException} from '@tsdotnet/exceptions';
 import {Lazy} from '@tsdotnet/lazy';
 import TaskHandlerBase from './TaskHandlerBase';
-import TaskState from './TaskState';
+import type TaskState from './TaskState';
 import TaskStatus from './TaskStatus';
 
 /**

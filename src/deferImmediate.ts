@@ -29,9 +29,9 @@ interface TaskQueueEntry
 	extends LinkedNode<TaskQueueEntry>
 {
 	task: Function;
-	domain?: Domain;
+	domain?: Domain | undefined;
 	context?: any;
-	args?: any[];
+	args?: any[] | undefined;
 	canceller: () => boolean;
 }
 

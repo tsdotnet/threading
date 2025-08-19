@@ -3,7 +3,6 @@
  * @license MIT
  */
 class DeferBase {
-    // It may be a Timer in node, should not be restricted to number.
     _id;
     dispose() {
         this.cancel();
@@ -13,10 +12,9 @@ class Defer extends DeferBase {
     constructor(task, delay = 0, payload) {
         super();
         if (!(delay > 0))
-            delay = 0; // covers undefined and null.
+            delay = 0;
         this._id = setTimeout(Defer.handler, delay, task, this, payload);
     }
-    // Use a static function here to avoid recreating a new function every time.
     static handler(task, d, payload) {
         d.cancel();
         task(payload);
@@ -31,37 +29,9 @@ class Defer extends DeferBase {
         return false;
     }
 }
-class DeferInterval extends DeferBase {
-    _remaining;
-    constructor(task, interval, _remaining = Infinity) {
-        super();
-        this._remaining = _remaining;
-        if (interval == null)
-            throw '\'interval\' must be a valid number.';
-        if (interval < 0)
-            throw '\'interval\' cannot be negative.';
-        this._id = setInterval(DeferInterval.handler, interval, task, this);
-    }
-    static handler(task, d) {
-        if (!(--d._remaining))
-            d.cancel();
-        task();
-    }
-    cancel() {
-        const id = this._id;
-        if (id) {
-            clearInterval(id);
-            this._id = null;
-            return true;
-        }
-        return false;
-    }
-}
-export function defer(task, delay, payload) {
+function defer(task, delay, payload) {
     return new Defer(task, delay, payload);
 }
-export function interval(task, interval, count = Infinity) {
-    return new DeferInterval(task, interval, count);
-}
-export default defer;
+
+export { defer as default, defer };
 //# sourceMappingURL=defer.js.map

@@ -1,15 +1,12 @@
+import { ArgumentNullException } from '@tsdotnet/exceptions';
+import { Lazy } from '@tsdotnet/lazy';
+import TaskHandlerBase from './TaskHandlerBase.js';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import { ArgumentNullException } from '@tsdotnet/exceptions';
-import { Lazy } from '@tsdotnet/lazy';
-import TaskHandlerBase from './TaskHandlerBase';
-/**
- * A simplified synchronous (but deferrable) version of Task<T>
- * Asynchronous operations should use Promise<T>.
- */
-export class Task extends TaskHandlerBase {
+class Task extends TaskHandlerBase {
     _result;
     constructor(valueFactory) {
         super();
@@ -30,12 +27,12 @@ export class Task extends TaskHandlerBase {
         return this._result.error;
     }
     start(defer) {
-        if (this.getStatus() == 0 /* TaskStatus.Created */) {
+        if (this.getStatus() == 0) {
             super.start(defer);
         }
     }
     runSynchronously() {
-        if (this.getStatus() == 0 /* TaskStatus.Created */) {
+        if (this.getStatus() == 0) {
             super.runSynchronously();
         }
     }
@@ -43,7 +40,7 @@ export class Task extends TaskHandlerBase {
         this._result.getValue();
     }
     getResult() {
-        return this._result.value; // This will detect any potential recursion.
+        return this._result.value;
     }
     getState() {
         const r = this._result;
@@ -62,5 +59,6 @@ export class Task extends TaskHandlerBase {
         }
     }
 }
-export default Task;
+
+export { Task, Task as default };
 //# sourceMappingURL=Task.js.map

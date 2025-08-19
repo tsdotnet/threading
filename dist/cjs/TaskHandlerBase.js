@@ -6,14 +6,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const disposable_1 = require("@tsdotnet/disposable");
 const NAME = 'TaskHandlerBase';
-/**
- * A simple class for handling potentially repeated executions either deferred or immediate.
- */
 class TaskHandlerBase extends disposable_1.DisposableBase {
     constructor() {
         super(NAME);
         this._timeoutId = null;
-        this._status = 0 /* TaskStatus.Created */;
+        this._status = 0;
     }
     get status() {
         return this.getStatus();
@@ -21,28 +18,23 @@ class TaskHandlerBase extends disposable_1.DisposableBase {
     get isScheduled() {
         return !!this._timeoutId;
     }
-    // Use a static function here to avoid recreating a new function every time.
     static _handler(d) {
         d.cancel();
-        d._status = 2 /* TaskStatus.Running */;
+        d._status = 2;
         try {
             d._onExecute();
-            d._status = 3 /* TaskStatus.RanToCompletion */;
+            d._status = 3;
         }
         catch (_a) {
-            d._status = 5 /* TaskStatus.Faulted */;
+            d._status = 5;
         }
     }
-    /**
-     * Schedules/Reschedules triggering the task.
-     * @param defer Optional time to wait until triggering.
-     */
     start(defer = 0) {
         this.throwIfDisposed();
         this.cancel();
-        this._status = 1 /* TaskStatus.WaitingToRun */;
+        this._status = 1;
         if (!(defer > 0))
-            defer = 0; // A negation is used to catch edge cases.
+            defer = 0;
         if (isFinite(defer))
             this._timeoutId = setTimeout(TaskHandlerBase._handler, defer, this);
     }
@@ -55,7 +47,7 @@ class TaskHandlerBase extends disposable_1.DisposableBase {
         if (id) {
             clearTimeout(id);
             this._timeoutId = null;
-            this._status = 4 /* TaskStatus.Cancelled */;
+            this._status = 4;
             return true;
         }
         return false;

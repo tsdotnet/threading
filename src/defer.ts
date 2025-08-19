@@ -3,8 +3,8 @@
  * @license MIT
  */
 
-import {Closure, Func} from '@tsdotnet/common-interfaces';
-import Cancellable from './Cancellable';
+import type {Closure, Func} from '@tsdotnet/common-interfaces';
+import type Cancellable from './Cancellable';
 
 abstract class DeferBase
 implements Cancellable

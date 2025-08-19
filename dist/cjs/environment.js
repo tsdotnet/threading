@@ -4,29 +4,27 @@
  * Licensing: MIT https://github.com/electricessence/TypeScript.NET-Core/blob/master/LICENSE.md
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isNodeJS = exports.isRequireJS = exports.isCommonJS = void 0;
-// Need to spoof this so WebPack doesn't panic (warnings).
+exports.isESM = exports.isNodeJS = exports.isRequireJS = exports.isCommonJS = void 0;
 let r;
 try {
-    r = eval('require');
+    r = typeof require !== 'undefined' ? require : undefined;
 }
-catch (ex) { }
-exports.isCommonJS = !!(r && r.resolve);
-exports.isRequireJS = !!(r && r.toUrl && r.defined);
-/*
- * Ensure is in a real Node environment, with a `process.nextTick`.
- * To see through fake Node environments:
- * Mocha test runner - exposes a `process` global without a `nextTick`
- * Browserify - exposes a `process.nexTick` function that uses
- * `setTimeout`. In this case `setImmediate` is preferred because
- * it is faster. Browserify's `process.toString()` yields
- * "[object Object]", while in a real Node environment
- * `process.nextTick()` yields "[object process]".
- */
+catch (ex) {
+    r = undefined;
+}
+let isESMEnvironment = false;
+try {
+    isESMEnvironment = typeof require === 'undefined' && typeof module === 'undefined';
+}
+catch (ex) {
+    isESMEnvironment = true;
+}
+exports.isCommonJS = !!(r && r.resolve) && !isESMEnvironment;
+exports.isRequireJS = !!(r && r.toUrl && r.defined) && !isESMEnvironment;
 exports.isNodeJS = typeof process == 'object'
     && process.toString() === '[object process]'
     && process.nextTick != void 0;
-//noinspection JSUnusedAssignment
+exports.isESM = isESMEnvironment;
 try {
     Object.freeze(exports);
 }

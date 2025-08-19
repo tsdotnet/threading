@@ -1,10 +1,11 @@
+import { ArgumentNullException } from '@tsdotnet/exceptions';
+import TaskHandlerBase from './TaskHandlerBase.js';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import { ArgumentNullException } from '@tsdotnet/exceptions';
-import TaskHandlerBase from './TaskHandlerBase';
-export default class TaskHandler extends TaskHandlerBase {
+class TaskHandler extends TaskHandlerBase {
     _action;
     constructor(_action) {
         super();
@@ -20,4 +21,6 @@ export default class TaskHandler extends TaskHandlerBase {
         this._action = null;
     }
 }
+
+export { TaskHandler as default };
 //# sourceMappingURL=TaskHandler.js.map

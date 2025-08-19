@@ -1,18 +1,16 @@
+import { DisposableBase } from '@tsdotnet/disposable';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import { DisposableBase } from '@tsdotnet/disposable';
 const NAME = 'TaskHandlerBase';
-/**
- * A simple class for handling potentially repeated executions either deferred or immediate.
- */
-export default class TaskHandlerBase extends DisposableBase {
+class TaskHandlerBase extends DisposableBase {
     _timeoutId;
     constructor() {
         super(NAME);
         this._timeoutId = null;
-        this._status = 0 /* TaskStatus.Created */;
+        this._status = 0;
     }
     _status;
     get status() {
@@ -21,28 +19,23 @@ export default class TaskHandlerBase extends DisposableBase {
     get isScheduled() {
         return !!this._timeoutId;
     }
-    // Use a static function here to avoid recreating a new function every time.
     static _handler(d) {
         d.cancel();
-        d._status = 2 /* TaskStatus.Running */;
+        d._status = 2;
         try {
             d._onExecute();
-            d._status = 3 /* TaskStatus.RanToCompletion */;
+            d._status = 3;
         }
         catch {
-            d._status = 5 /* TaskStatus.Faulted */;
+            d._status = 5;
         }
     }
-    /**
-     * Schedules/Reschedules triggering the task.
-     * @param defer Optional time to wait until triggering.
-     */
     start(defer = 0) {
         this.throwIfDisposed();
         this.cancel();
-        this._status = 1 /* TaskStatus.WaitingToRun */;
+        this._status = 1;
         if (!(defer > 0))
-            defer = 0; // A negation is used to catch edge cases.
+            defer = 0;
         if (isFinite(defer))
             this._timeoutId = setTimeout(TaskHandlerBase._handler, defer, this);
     }
@@ -55,7 +48,7 @@ export default class TaskHandlerBase extends DisposableBase {
         if (id) {
             clearTimeout(id);
             this._timeoutId = null;
-            this._status = 4 /* TaskStatus.Cancelled */;
+            this._status = 4;
             return true;
         }
         return false;
@@ -68,4 +61,6 @@ export default class TaskHandlerBase extends DisposableBase {
         this._status = null;
     }
 }
+
+export { TaskHandlerBase as default };
 //# sourceMappingURL=TaskHandlerBase.js.map

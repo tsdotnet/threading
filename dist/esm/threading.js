@@ -1,13 +1,9 @@
-/*!
- * @author electricessence / https://github.com/electricessence/
- * @license MIT
- */
-import defer from './defer';
-import deferImmediate from './deferImmediate';
-import * as environment from './environment';
-import Task from './Task';
-import TaskHandler from './TaskHandler';
-import TaskHandlerBase from './TaskHandlerBase';
-import Worker from './Worker';
-export { defer, deferImmediate, environment, Worker, Task, TaskHandler, TaskHandlerBase };
+export { defer } from './defer.js';
+export { deferImmediate } from './deferImmediate.js';
+import * as environment from './environment.js';
+export { environment };
+export { Task } from './Task.js';
+export { default as TaskHandler } from './TaskHandler.js';
+export { default as TaskHandlerBase } from './TaskHandlerBase.js';
+export { Worker } from './Worker.js';
 //# sourceMappingURL=threading.js.map

@@ -15,10 +15,9 @@ class Defer extends DeferBase {
     constructor(task, delay = 0, payload) {
         super();
         if (!(delay > 0))
-            delay = 0; // covers undefined and null.
+            delay = 0;
         this._id = setTimeout(Defer.handler, delay, task, this, payload);
     }
-    // Use a static function here to avoid recreating a new function every time.
     static handler(task, d, payload) {
         d.cancel();
         task(payload);

@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-import Cancellable from './Cancellable';
+import type Cancellable from './Cancellable';
 import defer from './defer';
 import deferImmediate from './deferImmediate';
 import * as environment from './environment';
@@ -12,7 +12,7 @@ import TaskHandler from './TaskHandler';
 import TaskHandlerBase from './TaskHandlerBase';
 import TaskStatus from './TaskStatus';
 import Worker from './Worker';
-import {WorkerConstructor, WorkerLike} from './WorkerLike';
+import type {WorkerConstructor, WorkerLike} from './WorkerLike';
 
 
 export {
