@@ -5,10 +5,9 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const disposable_1 = require("@tsdotnet/disposable");
-const NAME = 'TaskHandlerBase';
 class TaskHandlerBase extends disposable_1.DisposableBase {
     constructor() {
-        super(NAME);
+        super();
         this._timeoutId = null;
         this._status = 0;
     }
@@ -30,7 +29,7 @@ class TaskHandlerBase extends disposable_1.DisposableBase {
         }
     }
     start(defer = 0) {
-        this.throwIfDisposed();
+        this.assertIsAlive(true);
         this.cancel();
         this._status = 1;
         if (!(defer > 0))
@@ -39,7 +38,7 @@ class TaskHandlerBase extends disposable_1.DisposableBase {
             this._timeoutId = setTimeout(TaskHandlerBase._handler, defer, this);
     }
     runSynchronously() {
-        this.throwIfDisposed();
+        this.assertIsAlive(true);
         TaskHandlerBase._handler(this);
     }
     cancel() {

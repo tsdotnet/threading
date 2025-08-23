@@ -4,11 +4,10 @@ import { DisposableBase } from '@tsdotnet/disposable';
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-const NAME = 'TaskHandlerBase';
 class TaskHandlerBase extends DisposableBase {
     _timeoutId;
     constructor() {
-        super(NAME);
+        super();
         this._timeoutId = null;
         this._status = 0;
     }
@@ -31,7 +30,7 @@ class TaskHandlerBase extends DisposableBase {
         }
     }
     start(defer = 0) {
-        this.throwIfDisposed();
+        this.assertIsAlive(true);
         this.cancel();
         this._status = 1;
         if (!(defer > 0))
@@ -40,7 +39,7 @@ class TaskHandlerBase extends DisposableBase {
             this._timeoutId = setTimeout(TaskHandlerBase._handler, defer, this);
     }
     runSynchronously() {
-        this.throwIfDisposed();
+        this.assertIsAlive(true);
         TaskHandlerBase._handler(this);
     }
     cancel() {

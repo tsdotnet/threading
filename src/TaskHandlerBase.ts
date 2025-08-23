@@ -7,8 +7,6 @@ import { DisposableBase } from '@tsdotnet/disposable';
 import type Cancellable from './Cancellable';
 import TaskStatus from './TaskStatus';
 
-
-const NAME = 'TaskHandlerBase';
 /**
  * A simple class for handling potentially repeated executions either deferred or immediate.
  */
@@ -20,7 +18,7 @@ export default abstract class TaskHandlerBase
 
 	protected constructor ()
 	{
-		super(NAME);
+		super();
 		this._timeoutId = null;
 		this._status = TaskStatus.Created;
 	}
@@ -59,7 +57,7 @@ export default abstract class TaskHandlerBase
 	 */
 	start (defer: number = 0): void
 	{
-		this.throwIfDisposed();
+		this.assertIsAlive(true);
 
 		this.cancel();
 		this._status = TaskStatus.WaitingToRun;
@@ -70,7 +68,7 @@ export default abstract class TaskHandlerBase
 
 	runSynchronously (): void
 	{
-		this.throwIfDisposed();
+		this.assertIsAlive(true);
 		TaskHandlerBase._handler(this);
 	}
 

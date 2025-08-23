@@ -30,7 +30,7 @@ export default class NodeWorker
 
 	postMessage (obj: unknown): void
 	{
-		this.throwIfDisposed();
+		this.assertIsAlive(true);
 		this._process.send(JSON.stringify({data: obj}));
 	}
 

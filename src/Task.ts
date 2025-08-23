@@ -33,14 +33,14 @@ export class Task<T>
 
 	get result (): T
 	{
-		this.throwIfDisposed();
+		this.assertIsAlive(true);
 		this.runSynchronously();
 		return this.getResult();
 	}
 
 	get error (): any
 	{
-		this.throwIfDisposed();
+		this.assertIsAlive();
 		return this._result.error;
 	}
 

@@ -14,7 +14,7 @@ class NodeWorker extends observable_base_1.ObservableBase {
         this._process.on('error', (err) => this._onError(err));
     }
     postMessage(obj) {
-        this.throwIfDisposed();
+        this.assertIsAlive(true);
         this._process.send(JSON.stringify({ data: obj }));
     }
     terminate() {

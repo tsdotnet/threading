@@ -20,12 +20,12 @@ class Task extends TaskHandlerBase_1.default {
         return this.getState();
     }
     get result() {
-        this.throwIfDisposed();
+        this.assertIsAlive(true);
         this.runSynchronously();
         return this.getResult();
     }
     get error() {
-        this.throwIfDisposed();
+        this.assertIsAlive();
         return this._result.error;
     }
     start(defer) {
