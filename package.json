@@ -74,10 +74,10 @@
     "@tsdotnet/disposable": "^2.0.1",
     "@tsdotnet/exceptions": "^1.2.5",
     "@tsdotnet/lazy": "^2.0.1",
-    "@tsdotnet/linked-node-list": "^1.4.7",
-    "@tsdotnet/object-pool": "^2.0.1",
-    "@tsdotnet/observable-base": "^2.0.6",
-    "@tsdotnet/queue": "^1.2.13",
+    "@tsdotnet/linked-node-list": "^1.4.8",
+    "@tsdotnet/object-pool": "^2.0.2",
+    "@tsdotnet/observable-base": "^2.0.7",
+    "@tsdotnet/queue": "^1.2.14",
     "tslib": "^2.8.1"
   },
   "pnpm": {
