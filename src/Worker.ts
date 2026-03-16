@@ -3,8 +3,8 @@
  * @license MIT
  */
 
-import NodeWorkerFactory from './NodeWorkerFactory';
-import { WorkerConstructor } from './WorkerLike';
+import NodeWorkerFactory from './NodeWorkerFactory.js';
+import { WorkerConstructor } from './WorkerLike.js';
 
 /**
  * Default worker constructor for the current environment.

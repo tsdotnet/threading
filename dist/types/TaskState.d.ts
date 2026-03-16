@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-import type TaskStatus from './TaskStatus';
+import type TaskStatus from './TaskStatus.js';
 
 export default interface TaskState<T>
 {

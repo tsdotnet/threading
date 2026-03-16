@@ -6,9 +6,9 @@
 import type {Func} from '@tsdotnet/common-interfaces';
 import {ArgumentNullException} from '@tsdotnet/exceptions';
 import {Lazy} from '@tsdotnet/lazy';
-import TaskHandlerBase from './TaskHandlerBase';
-import type TaskState from './TaskState';
-import TaskStatus from './TaskStatus';
+import TaskHandlerBase from './TaskHandlerBase.js';
+import type TaskState from './TaskState.js';
+import TaskStatus from './TaskStatus.js';
 
 /**
  * A simplified synchronous (but deferrable) version of Task<T>

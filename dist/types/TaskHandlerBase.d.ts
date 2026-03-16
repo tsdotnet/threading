@@ -3,8 +3,8 @@
  * @license MIT
  */
 import { DisposableBase } from '@tsdotnet/disposable';
-import type Cancellable from './Cancellable';
-import TaskStatus from './TaskStatus';
+import type Cancellable from './Cancellable.js';
+import TaskStatus from './TaskStatus.js';
 export default abstract class TaskHandlerBase extends DisposableBase implements Cancellable {
     private _timeoutId;
     protected constructor();

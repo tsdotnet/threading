@@ -4,8 +4,8 @@
  */
 
 import { DisposableBase } from '@tsdotnet/disposable';
-import type Cancellable from './Cancellable';
-import TaskStatus from './TaskStatus';
+import type Cancellable from './Cancellable.js';
+import TaskStatus from './TaskStatus.js';
 
 /**
  * A simple class for handling potentially repeated executions either deferred or immediate.

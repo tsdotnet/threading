@@ -5,7 +5,7 @@
 
 import {type Closure} from '@tsdotnet/common-interfaces';
 import {ArgumentNullException} from '@tsdotnet/exceptions';
-import TaskHandlerBase from './TaskHandlerBase';
+import TaskHandlerBase from './TaskHandlerBase.js';
 
 export default class TaskHandler
 	extends TaskHandlerBase

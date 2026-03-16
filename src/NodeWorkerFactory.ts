@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-import NodeWorker from './NodeWorker';
+import NodeWorker from './NodeWorker.js';
 // Node.js built-in module - will be external in browser bundles
 import {fork} from 'node:child_process';
 

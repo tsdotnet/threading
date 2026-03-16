@@ -6,7 +6,7 @@
 
 import type {Action} from '@tsdotnet/common-interfaces';
 import {ObservableBase} from '@tsdotnet/observable-base';
-import type {WorkerLike} from './WorkerLike';
+import type {WorkerLike} from './WorkerLike.js';
 
 /**
  * Generic NodeWorker class that works with any child process implementation.

@@ -5,7 +5,7 @@
  */
 import type { Action } from '@tsdotnet/common-interfaces';
 import { ObservableBase } from '@tsdotnet/observable-base';
-import type { WorkerLike } from './WorkerLike';
+import type { WorkerLike } from './WorkerLike.js';
 export default class NodeWorker extends ObservableBase<any> implements WorkerLike {
     onmessage?: Action<{
         data: any;

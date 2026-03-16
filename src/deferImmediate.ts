@@ -8,8 +8,8 @@ import {type Closure} from '@tsdotnet/common-interfaces';
 import {LinkedNode, LinkedNodeList} from '@tsdotnet/linked-node-list';
 import ObjectPool from '@tsdotnet/object-pool';
 import Queue from '@tsdotnet/queue';
-import type Cancellable from './Cancellable';
-import {isNodeJS} from './environment';
+import type Cancellable from './Cancellable.js';
+import {isNodeJS} from './environment.js';
 
 declare namespace process
 {

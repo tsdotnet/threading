@@ -11,7 +11,7 @@ const tslib_1 = require("tslib");
 const linked_node_list_1 = require("@tsdotnet/linked-node-list");
 const object_pool_1 = tslib_1.__importDefault(require("@tsdotnet/object-pool"));
 const queue_1 = tslib_1.__importDefault(require("@tsdotnet/queue"));
-const environment_1 = require("./environment");
+const environment_js_1 = require("./environment.js");
 let requestTick;
 let flushing = false;
 function flush() {
@@ -44,7 +44,7 @@ function runSingle(task, domain, context, params) {
         task.apply(context, params);
     }
     catch (e) {
-        if (environment_1.isNodeJS) {
+        if (environment_js_1.isNodeJS) {
             if (domain) {
                 domain.exit();
             }
@@ -73,7 +73,7 @@ function requestFlush() {
 function deferImmediate(task, context, args) {
     const entry = entryPool.take();
     entry.task = task;
-    entry.domain = environment_1.isNodeJS && process['domain'];
+    entry.domain = environment_js_1.isNodeJS && process['domain'];
     entry.context = context;
     entry.args = args && args.slice();
     entry.canceller = () => {
@@ -95,7 +95,7 @@ function runAfterDeferred(task) {
     laterQueue.enqueue(task);
     requestFlush();
 }
-if (environment_1.isNodeJS) {
+if (environment_js_1.isNodeJS) {
     requestTick = () => {
         process.nextTick(flush);
     };

@@ -6,7 +6,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Worker = void 0;
 const tslib_1 = require("tslib");
-const NodeWorkerFactory_1 = tslib_1.__importDefault(require("./NodeWorkerFactory"));
+const NodeWorkerFactory_js_1 = tslib_1.__importDefault(require("./NodeWorkerFactory.js"));
 exports.Worker = getNodeWorker();
 exports.default = exports.Worker;
 function getNodeWorker() {
@@ -22,7 +22,7 @@ function getNodeWorker() {
     return class FactoryWorker {
         constructor(url) {
             const urlString = typeof url === 'string' ? url : url.href;
-            this._worker = NodeWorkerFactory_1.default.create(urlString);
+            this._worker = NodeWorkerFactory_js_1.default.create(urlString);
         }
         postMessage(message, transfer) {
             this._worker.postMessage(message);

@@ -3,8 +3,8 @@
  * @license MIT
  */
 import type { Func } from '@tsdotnet/common-interfaces';
-import TaskHandlerBase from './TaskHandlerBase';
-import type TaskState from './TaskState';
+import TaskHandlerBase from './TaskHandlerBase.js';
+import type TaskState from './TaskState.js';
 export declare class Task<T> extends TaskHandlerBase {
     private readonly _result;
     constructor(valueFactory: Func<T>);

@@ -9,7 +9,7 @@ try {
 catch (ex) {
     r = undefined;
 }
-let isESMEnvironment = false;
+let isESMEnvironment;
 try {
     isESMEnvironment = typeof require === 'undefined' && typeof module === 'undefined';
 }

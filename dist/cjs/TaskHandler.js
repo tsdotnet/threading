@@ -6,8 +6,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const exceptions_1 = require("@tsdotnet/exceptions");
-const TaskHandlerBase_1 = tslib_1.__importDefault(require("./TaskHandlerBase"));
-class TaskHandler extends TaskHandlerBase_1.default {
+const TaskHandlerBase_js_1 = tslib_1.__importDefault(require("./TaskHandlerBase.js"));
+class TaskHandler extends TaskHandlerBase_js_1.default {
     constructor(_action) {
         super();
         this._action = _action;

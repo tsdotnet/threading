@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import TaskHandler from '../src/TaskHandler';
-import Worker from '../src/Worker';
+import TaskHandler from '../src/TaskHandler.js';
+import Worker from '../src/Worker.js';
 
 describe('Worker', () => {
 	it('have valid constructor', () => {

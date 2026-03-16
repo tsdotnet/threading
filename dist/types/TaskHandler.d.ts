@@ -3,7 +3,7 @@
  * @license MIT
  */
 import { type Closure } from '@tsdotnet/common-interfaces';
-import TaskHandlerBase from './TaskHandlerBase';
+import TaskHandlerBase from './TaskHandlerBase.js';
 export default class TaskHandler extends TaskHandlerBase {
     private readonly _action;
     constructor(_action: Closure);

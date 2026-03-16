@@ -8,8 +8,8 @@ exports.Task = void 0;
 const tslib_1 = require("tslib");
 const exceptions_1 = require("@tsdotnet/exceptions");
 const lazy_1 = require("@tsdotnet/lazy");
-const TaskHandlerBase_1 = tslib_1.__importDefault(require("./TaskHandlerBase"));
-class Task extends TaskHandlerBase_1.default {
+const TaskHandlerBase_js_1 = tslib_1.__importDefault(require("./TaskHandlerBase.js"));
+class Task extends TaskHandlerBase_js_1.default {
     constructor(valueFactory) {
         super();
         if (!valueFactory)

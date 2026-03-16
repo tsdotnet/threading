@@ -4,7 +4,7 @@
  */
 
 import type {Closure, Func} from '@tsdotnet/common-interfaces';
-import type Cancellable from './Cancellable';
+import type Cancellable from './Cancellable.js';
 
 abstract class DeferBase
 implements Cancellable

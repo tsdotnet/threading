@@ -17,7 +17,7 @@ try {
 }
 
 // ESM environment detection
-let isESMEnvironment: boolean = false;
+let isESMEnvironment: boolean;
 try {
 	// In ESM, require is not defined, and module is not defined
 	isESMEnvironment = typeof require === 'undefined' && typeof module === 'undefined';

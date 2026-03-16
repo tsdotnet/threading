@@ -1,5 +1,5 @@
-export { defer } from './defer.js';
-export { deferImmediate } from './deferImmediate.js';
+export { default as defer } from './defer.js';
+export { default as deferImmediate } from './deferImmediate.js';
 import * as environment from './environment.js';
 export { environment };
 export { Task } from './Task.js';
