@@ -5,5 +5,6 @@ export { environment };
 export { Task } from './Task.js';
 export { default as TaskHandler } from './TaskHandler.js';
 export { default as TaskHandlerBase } from './TaskHandlerBase.js';
+export { default as TaskStatus } from './TaskStatus.js';
 export { Worker } from './Worker.js';
 //# sourceMappingURL=threading.js.map

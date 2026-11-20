@@ -7,9 +7,10 @@
  */
 
 /**
- *  Represents the current stage in the lifecycle of a Task.
+ * Const enum for TaskStatus values, inlined at compile time.
+ * Used internally; consumers use the regular TaskStatus enum.
  */
-const enum TaskStatus
+export const enum TaskStatusValue
 {
 	/**
 	 *  The task has been initialized but has not yet been scheduled.
@@ -51,6 +52,21 @@ const enum TaskStatus
 	 *  The task completed due to an unhandled exception.
 	 */
 	Faulted
+}
+
+/**
+ *  Represents the current stage in the lifecycle of a Task.
+ *  A regular enum so it is usable as a runtime value in every consumer setup
+ *  (isolatedModules / verbatimModuleSyntax cannot read an ambient const enum).
+ */
+enum TaskStatus
+{
+	Created         = TaskStatusValue.Created,
+	WaitingToRun    = TaskStatusValue.WaitingToRun,
+	Running         = TaskStatusValue.Running,
+	RanToCompletion = TaskStatusValue.RanToCompletion,
+	Cancelled       = TaskStatusValue.Cancelled,
+	Faulted         = TaskStatusValue.Faulted,
 }
 
 export default TaskStatus;

@@ -4,7 +4,7 @@
  * @license MIT
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TaskHandlerBase = exports.TaskHandler = exports.Task = exports.Worker = exports.environment = exports.deferImmediate = exports.defer = void 0;
+exports.TaskStatus = exports.TaskHandlerBase = exports.TaskHandler = exports.Task = exports.Worker = exports.environment = exports.deferImmediate = exports.defer = void 0;
 const tslib_1 = require("tslib");
 const defer_js_1 = tslib_1.__importDefault(require("./defer.js"));
 exports.defer = defer_js_1.default;
@@ -18,6 +18,8 @@ const TaskHandler_js_1 = tslib_1.__importDefault(require("./TaskHandler.js"));
 exports.TaskHandler = TaskHandler_js_1.default;
 const TaskHandlerBase_js_1 = tslib_1.__importDefault(require("./TaskHandlerBase.js"));
 exports.TaskHandlerBase = TaskHandlerBase_js_1.default;
+const TaskStatus_js_1 = tslib_1.__importDefault(require("./TaskStatus.js"));
+exports.TaskStatus = TaskStatus_js_1.default;
 const Worker_js_1 = tslib_1.__importDefault(require("./Worker.js"));
 exports.Worker = Worker_js_1.default;
 //# sourceMappingURL=threading.js.map

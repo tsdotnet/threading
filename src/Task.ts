@@ -8,7 +8,7 @@ import {ArgumentNullException} from '@tsdotnet/exceptions';
 import {Lazy} from '@tsdotnet/lazy';
 import TaskHandlerBase from './TaskHandlerBase.js';
 import type TaskState from './TaskState.js';
-import TaskStatus from './TaskStatus.js';
+import { TaskStatusValue } from './TaskStatus.js';
 
 /**
  * A simplified synchronous (but deferrable) version of Task<T>
@@ -46,7 +46,7 @@ export class Task<T>
 
 	start (defer?: number): void
 	{
-		if(this.getStatus()==TaskStatus.Created)
+		if((this.getStatus() as number)==TaskStatusValue.Created)
 		{
 			super.start(defer);
 		}
@@ -54,7 +54,7 @@ export class Task<T>
 
 	runSynchronously (): void
 	{
-		if(this.getStatus()==TaskStatus.Created)
+		if((this.getStatus() as number)==TaskStatusValue.Created)
 		{
 			super.runSynchronously();
 		}
