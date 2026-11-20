@@ -4,19 +4,19 @@
  */
 
 import NodeWorker from './NodeWorker.js';
-// Node.js built-in module - will be external in browser bundles
-import {fork} from 'node:child_process';
 
 /**
- * Factory for creating NodeWorker instances (ESM version)
+ * Factory for creating NodeWorker instances.
+ * `node:child_process` is loaded on first use (process.getBuiltinModule), not imported,
+ * so browser bundlers never see a Node built-in when they bundle this package.
  */
 export class NodeWorkerFactory {
 	/**
 	 * Create a NodeWorker instance
 	 */
 	static create(url: string): NodeWorker {
-		const process = fork(url);
-		return new NodeWorker(process);
+		const child = process.getBuiltinModule('node:child_process').fork(url);
+		return new NodeWorker(child);
 	}
 }
 
