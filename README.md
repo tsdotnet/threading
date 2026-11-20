@@ -1,4 +1,4 @@
-![@tsdotnet/threading: Hand work to workers. Tasks, deferral and workers.](https://cdn.jsdelivr.net/gh/tsdotnet/threading@master/assets/banner.svg)
+<a name="banner"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/threading@master/assets/banner.svg" alt="@tsdotnet/threading: Hand work to workers. Tasks, deferral and workers."></a>
 
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/threading.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/threading)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tsdotnet/threading/blob/master/LICENSE)
